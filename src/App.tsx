@@ -1,6 +1,7 @@
 import Header from './components/Header'
 import { GlobalCss } from './styles'
 import Restaurant from './components/Restaurant'
+import RestaurantList from './components/RestaurantList'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const rotas = createBrowserRouter([
@@ -8,7 +9,7 @@ const rotas = createBrowserRouter([
     path: '/',
     element: (
       <>
-        <Restaurant />
+        <RestaurantList title="Restaurantes" background="rosa1" />
       </>
     )
   }
