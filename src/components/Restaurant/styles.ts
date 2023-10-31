@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 export const Card = styled.div`
-  background-color: ${cores.rosa2};
+  background-color: ${cores.rosa3};
   border-radius: 8px;
   padding: 8px;
 `
