@@ -4,7 +4,7 @@ import { Card, Descricao, Titulo } from './styles'
 
 const Restaurant = () => (
   <Card>
-    <img src="//placehold.it/222x250" />
+    <img src="//placehold.it/472x217" />
     <Titulo>Nome do restaurante</Titulo>
     <Tag>Windows</Tag>
     <Descricao>
