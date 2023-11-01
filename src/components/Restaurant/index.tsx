@@ -5,7 +5,7 @@ import { Card, Descricao, Titulo } from './styles'
 const Restaurant = () => (
   <Card>
     <img src="//placehold.it/222x250" />
-    <Titulo>Nome do jogo</Titulo>
+    <Titulo>Nome do restaurante</Titulo>
     <Tag>Windows</Tag>
     <Descricao>
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui quos neque

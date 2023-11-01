@@ -11,17 +11,24 @@ export const cores = {
 }
 
 export const GlobalCss = createGlobalStyle`
-    *{
-        margin: 0;
-        padding:0;
-        box-sizing: border-box;
-        front-family: Roboto, sans-serif;
-    }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+  }
 
-    body {
-        background-color: ${cores.rosa3};
-        color: ${cores.rosa1};
-    }
+  body {
+    background-color: ${cores.rosa3};
+    color: ${cores.rosa1};
+  }
 
-
-    `
+  .container {
+    width: 1024px;
+    height: 1290px;
+    position: absolute;
+    top: 440px;
+    left: 171px;
+    border: 1px;
+  }
+`
