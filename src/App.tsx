@@ -1,4 +1,5 @@
 import Header from './components/Header'
+import Footer from './components/Footer'
 import { GlobalCss } from './styles'
 import Restaurant from './components/Restaurant'
 import RestaurantList from './components/RestaurantList'
@@ -18,10 +19,11 @@ function App() {
   return (
     <>
       <GlobalCss />
+      <Header />
       <div>
-        <Header />
+        <RouterProvider router={rotas} />
       </div>
-      <RouterProvider router={rotas} />
+      <Footer />
     </>
   )
 }

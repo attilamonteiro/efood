@@ -1,18 +1,50 @@
+import React from 'react'
 import Tag from '../Tag'
+import { Card, Descricao, Titulo, Tipo } from './styles'
 
-import { Card, Descricao, Titulo } from './styles'
+export type RestaurantType = {
+  id: number
+  titulo: string
+  destacado: boolean
+  tipo: string
+  avaliacao: number
+  descricao: string
+  capa: string
+  cardapio: Array<{
+    foto: string
+    preco: number
+    id: number
+    nome: string
+    descricao: string
+    porcao: string
+  }>
+}
 
-const Restaurant = () => (
+const Restaurant: React.FC<RestaurantType> = ({
+  titulo,
+  destacado,
+  tipo,
+  avaliacao,
+  descricao,
+  capa
+}) => (
   <Card>
-    <img src="//placehold.it/472x217" />
-    <Titulo>Nome do restaurante</Titulo>
-    <Tag>Windows</Tag>
-    <Descricao>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui quos neque
-      minus? Odio ipsam vero corporis impedit, adipisci architecto numquam
-      autem, voluptates, distinctio recusandae cupiditate. Qui officiis mollitia
-      repudiandae corrupti!
-    </Descricao>
+    <img
+      src={capa}
+      alt={titulo}
+      style={{ maxWidth: '100%', maxHeight: '271px' }}
+    />
+    <Tipo>
+      {[tipo].map((tipo) => (
+        <Tag key={tipo}>{tipo}</Tag>
+      ))}
+    </Tipo>
+    <Titulo>{titulo}</Titulo>
+    <Descricao>{descricao}</Descricao>
+    <div>
+      <Tag>Saiba mais...</Tag>
+    </div>
   </Card>
 )
+
 export default Restaurant

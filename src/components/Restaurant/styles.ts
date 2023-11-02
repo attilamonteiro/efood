@@ -9,9 +9,14 @@ export const Card = styled.div`
   border-left: 1px solid ${cores.rosa1};
   margin-bottom: 48px;
   width: 474px;
-  height: auto;
+  position: relative;
+  min-height: 217px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   ${TagContainer} {
-    margin-right: 16px;
+    margin-left: 8px;
+    margin-bottom: 8px;
   }
 `
 
@@ -20,7 +25,8 @@ export const Titulo = styled.h3`
   font-size: 18px;
   display: block;
   margin-top: 16px;
-  margin-bottom: 8px;
+  margin-left: 7px;
+  margin-top: 8px;
 `
 
 export const Descricao = styled.p`
@@ -28,4 +34,19 @@ export const Descricao = styled.p`
   line-height: 22px;
   display: block;
   margin-top: 16px;
+  padding: 8px;
+`
+
+export const Tipo = styled.div`
+  position: absolute;
+  top: 16px;
+  right: 16px;
+`
+
+export const Imagem = styled.img`
+  max-width: 100%
+  height: auto
+  position: absolute;
+  top: 0;
+  left: 0;
 `

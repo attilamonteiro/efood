@@ -24,10 +24,10 @@ export const GlobalCss = createGlobalStyle`
   }
 
   .container {
-    width: 1024px;
-    height: 1290px;
-    position: absolute;
-    top: 440px;
+    max-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: relative;
     left: 171px;
     border: 1px;
   }
