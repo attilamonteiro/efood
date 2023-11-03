@@ -4,15 +4,17 @@ import { Container, TextFooter } from './styles'
 
 const Footer = () => (
   <Container>
-    <div className="container">
-      <img src={logo} alt="efood" />
-      <div>cat2</div>
-      <TextFooter>
-        A efood é uma plataforma para divulgação de estabelecimentos, a
-        responsabilidade pela entrega, qualidade dos produtos é toda do
-        estabelecimento contratado.
-      </TextFooter>
+    <img src={logo} alt="efood" />
+    <div>
+      <ul>a</ul>
+      <ul>a</ul>
+      <ul>a</ul>
     </div>
+    <TextFooter>
+      A efood é uma plataforma para divulgação de estabelecimentos, a
+      responsabilidade pela entrega, qualidade dos produtos é toda do
+      estabelecimento contratado.
+    </TextFooter>
   </Container>
 )
 

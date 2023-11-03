@@ -4,20 +4,16 @@ import { cores } from './../../styles'
 
 export const Container = styled.footer`
   background-color: ${cores.rosa2};
-  padding: 200px 0;
+  width: 1366px;
+  height: 298px;
 
-      img {
-        width: 125px;
-        height: 57.5px;
-        flex-shrink: 0;
-      }
-    div {
-      /* Adjust styling for 'cat2' or any other elements */
-    }
-
-    p {
-      /* Adjust styling for the paragraph */
-    }
+  img {
+    margin-top: 40px;
+    margin-left: 621px;
+    margin-right: 620px;
+    width: 125px;
+    height: 57.5px;
+  }
   }
 `
 
@@ -26,6 +22,9 @@ export const TextFooter = styled.h1`
   font-family: Roboto;
   font-size: 10px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
+  text-align: center;
+  margin-left: 444px;
+  margin-bottom: 40px;
+  width: 480px;
 `

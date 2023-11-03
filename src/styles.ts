@@ -27,7 +27,7 @@ export const GlobalCss = createGlobalStyle`
     max-width: 1024px;
     width: 100%;
     height: auto;
-    position: relative;
+    margin: 171px;
     left: 171px;
     border: 1px;
   }
