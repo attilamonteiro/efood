@@ -3,7 +3,7 @@ import { cores } from './../../styles'
 
 export const HeaderBar = styled.header`
   background-color: ${cores.rosa2};
-  width: 1366px;
+  width: 100%;
   height: 384px;
   flex-shrink: 0;
 

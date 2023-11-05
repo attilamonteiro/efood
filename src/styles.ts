@@ -31,4 +31,5 @@ export const GlobalCss = createGlobalStyle`
     left: 171px;
     border: 1px;
   }
+
 `

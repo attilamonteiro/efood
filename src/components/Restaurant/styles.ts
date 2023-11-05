@@ -43,6 +43,21 @@ export const Tipo = styled.div`
   right: 16px;
 `
 
+export const AvaliacaoContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  span {
+    font-size: 14px;
+    margin-right: 8px;
+  }
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
+`
+
 export const Imagem = styled.img`
   max-width: 100%
   height: auto
