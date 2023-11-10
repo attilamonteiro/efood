@@ -1,9 +1,11 @@
+// styles.ts
+
 import styled from 'styled-components'
 import { cores } from './../../styles'
 
 export const HeaderBar = styled.header`
   background-color: ${cores.rosa2};
-  width: 100%;
+  width: 1366px;
   height: 384px;
   flex-shrink: 0;
 
@@ -15,6 +17,7 @@ export const HeaderBar = styled.header`
     flex-shrink: 0;
   }
 `
+
 export const TextHeader = styled.h1`
   background-color: ${cores.rosa2};
   text-align: center;

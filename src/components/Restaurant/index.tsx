@@ -1,6 +1,6 @@
 import React from 'react'
 import Tag from '../Tag'
-import { Card, Descricao, Titulo, Tipo, AvaliacaoContainer } from './styles'
+import { Card, Descricao, Titulo, Tipo } from './styles'
 import estrela from './../../assets/images/estrela.svg'
 
 export type RestaurantType = {
@@ -42,10 +42,10 @@ const Restaurant: React.FC<RestaurantType> = ({
     </Tipo>
     <Titulo>
       {titulo}{' '}
-      <AvaliacaoContainer>
-        <span>{avaliacao}</span>
+      <span>
+        {avaliacao}
         <img src={estrela} alt="Estrela" />
-      </AvaliacaoContainer>
+      </span>
     </Titulo>
     <Descricao>{descricao}</Descricao>
     <div>
