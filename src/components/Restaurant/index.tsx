@@ -2,6 +2,7 @@ import React from 'react'
 import Tag from '../Tag'
 import { Card, Descricao, Titulo, Tipo } from './styles'
 import estrela from './../../assets/images/estrela.svg'
+import Button from '../Button'
 
 export type RestaurantType = {
   id: number
@@ -49,7 +50,9 @@ const Restaurant: React.FC<RestaurantType> = ({
     </Titulo>
     <Descricao>{descricao}</Descricao>
     <div>
-      <Tag>Saiba mais...</Tag>
+      <Button type="link" to="/produto" title="Saiba mais...">
+        Saiba mais...
+      </Button>
     </div>
   </Card>
 )

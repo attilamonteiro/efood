@@ -2,7 +2,7 @@
 
 import styled from 'styled-components'
 import { cores } from '../../styles'
-import { TagContainer } from '../Tag/styles'
+import { ButtonLink } from '../Button/styles'
 
 export const Card = styled.div`
   background-color: ${cores.branco};
@@ -16,7 +16,7 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  ${TagContainer} {
+  ${ButtonLink} {
     margin-left: 8px;
     margin-bottom: 8px;
   }
