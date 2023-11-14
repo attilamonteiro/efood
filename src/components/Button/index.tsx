@@ -3,32 +3,27 @@
 import { ButtonContainer, ButtonLink } from './styles'
 
 export type Props = {
-  type: 'button' | 'link'
+  type?: 'button' | 'link' // Adicionando type como uma propriedade opcional
   size?: 'small' | 'big'
   title: string
   to?: string
   onClick?: () => void
-  children: string
+  children: React.ReactNode
 }
 
 const Button = ({ type, title, size, to, onClick, children }: Props) => {
-  if (type === 'button') {
+  if (type === 'link') {
     return (
-      <ButtonContainer
-        type="button"
-        title={title}
-        onClick={onClick}
-        size={size}
-      >
+      <ButtonLink to={to} title={title} size={size} onClick={onClick}>
         {children}
-      </ButtonContainer>
+      </ButtonLink>
     )
   }
 
   return (
-    <ButtonLink to={to as string} title={title} size={size} type="link">
+    <ButtonContainer type="button" title={title} onClick={onClick} size={size}>
       {children}
-    </ButtonLink>
+    </ButtonContainer>
   )
 }
 

@@ -3,6 +3,7 @@ import Tag from '../Tag'
 import { Card, Descricao, Titulo, Tipo } from './styles'
 import estrela from './../../assets/images/estrela.svg'
 import Button from '../Button'
+import { Link } from 'react-router-dom' // Importe o Link do react-router-dom
 
 export type RestaurantType = {
   id: number
@@ -23,6 +24,7 @@ export type RestaurantType = {
 }
 
 const Restaurant: React.FC<RestaurantType> = ({
+  id, // Adicione o id aqui
   titulo,
   destacado,
   tipo,
@@ -50,9 +52,13 @@ const Restaurant: React.FC<RestaurantType> = ({
     </Titulo>
     <Descricao>{descricao}</Descricao>
     <div>
-      <Button type="link" to="/produto" title="Saiba mais...">
-        Saiba mais...
-      </Button>
+      {/* Utilize o componente Link para criar a navegação */}
+      <Link to={`/product/${id}`}>
+        <Button type="link" to={`/product/${id}`} title="Saiba mais...">
+          {' '}
+          Saiba mais...{' '}
+        </Button>
+      </Link>
     </div>
   </Card>
 )

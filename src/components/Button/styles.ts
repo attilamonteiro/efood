@@ -2,9 +2,9 @@
 
 import styled from 'styled-components'
 import { cores } from '../../styles'
-import { Props } from '.'
+import { Props } from '.' // Importe explicitamente o tipo Props do mesmo diretório
 
-export const ButtonContainer = styled.div<Props>`
+export const ButtonContainer = styled.button<Props>`
   background-color: ${cores.rosa1};
   color: ${cores.rosa3};
   font-size: ${(props) => (props.size === 'big' ? '16px' : '10px')};
