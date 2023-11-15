@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Product from '../Product'
-import { Container, List, Title, ListItem } from './styles';
+import { Container, List, Title, ListItem } from './styles'
 
 interface ProductType {
   id: number
@@ -66,7 +66,7 @@ const ProductList: React.FC = () => {
         </List>
       </div>
     </Container>
-  );
-};
+  )
+}
 
-export default ProductList;
+export default ProductList

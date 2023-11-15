@@ -54,7 +54,12 @@ const Restaurant: React.FC<RestaurantType> = ({
     <div>
       {/* Utilize o componente Link para criar a navegação */}
       <Link to={`/product/${id}`}>
-        <Button type="link" to={`/product/${id}`} title="Primary Button" variant="primary">
+        <Button
+          type="link"
+          to={`/product/${id}`}
+          title="Primary Button"
+          variant="primary"
+        >
           {' '}
           Saiba mais...{' '}
         </Button>

@@ -22,15 +22,14 @@ export const Titulo = styled.h3`
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
-  color: ${cores.branco}
+  color: ${cores.branco};
 `
 
 export const Descricao = styled.p`
   font-size: 14px;
   line-height: 22px;
   margin-bottom: 16px;
-  color: ${cores.branco}
-
+  color: ${cores.branco};
 `
 
 export const Imagem = styled.img`

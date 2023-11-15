@@ -27,7 +27,9 @@ const Product: React.FC<ProductProps> = ({
       </Titulo>
       <Descricao>{descricao}</Descricao>
       {/* <p>Porção: {porcao}</p> */}
-      <Button title="Secondary Button" variant="secondary">Adiconar ao carrinho</Button>
+      <Button title="Secondary Button" variant="secondary">
+        Adiconar ao carrinho
+      </Button>
     </Card>
   </CardContainer>
 )
