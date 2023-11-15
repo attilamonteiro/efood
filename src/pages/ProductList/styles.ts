@@ -8,12 +8,20 @@ export const Container = styled.section`
 
 export const List = styled.ul`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 24px;
-  margin-top: 40px;
+  width: 500px;
+
 `
 
 export const Title = styled.h2`
   font-size: 18px;
   font-weight: bold;
+`
+
+export const ListItem = styled.li`
+  width: 100%;
+  overflow-wrap: break-word;
+  width: 500px;
+  
 `

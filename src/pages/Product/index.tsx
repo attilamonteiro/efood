@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { CardContainer, Card, Titulo, Descricao, Imagem } from './styles'
+import Button from '../../components/Button'
 
 interface ProductProps {
   id: number
@@ -25,7 +26,8 @@ const Product: React.FC<ProductProps> = ({
         {nome} <span>R$ {preco.toFixed(2)}</span>
       </Titulo>
       <Descricao>{descricao}</Descricao>
-      <p>Porção: {porcao}</p>
+      {/* <p>Porção: {porcao}</p> */}
+      <Button title="Secondary Button" variant="secondary">Adiconar ao carrinho</Button>
     </Card>
   </CardContainer>
 )

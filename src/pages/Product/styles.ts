@@ -8,11 +8,10 @@ export const CardContainer = styled.div`
 `
 
 export const Card = styled.div`
-  background-color: ${cores.branco};
-  border: 1px solid ${cores.rosa1};
-  border-radius: 8px;
+  background-color: ${cores.rosa1};
+  border: 1px solid ${cores.branco};
   margin-bottom: 48px;
-  width: 474px;
+  width: 320px;
   display: flex;
   flex-direction: column;
   ${/* Adicionei um espaçamento interno */ ''}
@@ -23,21 +22,18 @@ export const Titulo = styled.h3`
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
+  color: ${cores.branco}
 `
 
 export const Descricao = styled.p`
   font-size: 14px;
   line-height: 22px;
   margin-bottom: 16px;
+  color: ${cores.branco}
+
 `
 
 export const Imagem = styled.img`
   max-width: 100%;
   height: auto;
-  border-radius: 8px; /* Adicionei um border-radius para suavizar as bordas */
-`
-
-export const Porcao = styled.p`
-  font-size: 14px;
-  margin-top: auto;
 `

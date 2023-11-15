@@ -1,8 +1,7 @@
-// src/pages/ProductList/index.tsx
-
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import Product from '../Product'
-import { Container, List, Title } from './styles'
+import { Container, List, Title, ListItem } from './styles';
 
 interface ProductType {
   id: number
@@ -14,6 +13,7 @@ interface ProductType {
 }
 
 const ProductList: React.FC = () => {
+  const { id: restaurantId } = useParams<{ id: string }>() // Obtém o ID do restaurante da rota
   const [products, setProducts] = useState<ProductType[]>([])
 
   useEffect(() => {
@@ -24,8 +24,23 @@ const ProductList: React.FC = () => {
         )
         const data = await response.json()
 
-        if (Array.isArray(data) && data[0]?.cardapio) {
-          setProducts(data[0].cardapio)
+        console.log('Raw Data:', data)
+
+        if (Array.isArray(data)) {
+          // Encontrar o restaurante correspondente ao ID na rota
+          const selectedRestaurant = data.find(
+            (restaurant) => String(restaurant.id) === restaurantId
+          )
+
+          // Se o restaurante for encontrado, configurar os produtos com base no cardápio desse restaurante
+          if (selectedRestaurant) {
+            setProducts(selectedRestaurant.cardapio || [])
+          } else {
+            console.error(
+              'Restaurant not found for the given ID:',
+              restaurantId
+            )
+          }
         } else {
           console.error('Data format is not as expected:', data)
         }
@@ -35,7 +50,7 @@ const ProductList: React.FC = () => {
     }
 
     fetchData()
-  }, [])
+  }, [restaurantId])
 
   return (
     <Container>
@@ -43,12 +58,15 @@ const ProductList: React.FC = () => {
         <Title>Products</Title>
         <List>
           {products.map((product) => (
-            <Product key={product.id} {...product} />
+            <ListItem key={product.id}>
+              {/* Renderize o componente Product dentro do ListItem */}
+              <Product {...product} />
+            </ListItem>
           ))}
         </List>
       </div>
     </Container>
-  )
-}
+  );
+};
 
-export default ProductList
+export default ProductList;

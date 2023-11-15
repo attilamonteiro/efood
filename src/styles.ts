@@ -29,6 +29,7 @@ export const GlobalCss = createGlobalStyle`
     height: auto;
     margin: 171px;
     left: 171px;
+    right:171px;
     border: 1px;
   }
 
